@@ -22,7 +22,7 @@ In the prototype of the final project, three different approaches have been expl
    - In the first approach, we built a chatbot using Natural Language Processing (NLP) and Deep Neural Networks (DNN) to provide quick and accurate responses to admission-related queries. You can explore the code and details in the [NLP-DNN Approach Folder](https://github.com/notsointresting/DBATU-Inquiry-Chatbot/tree/main/Approach_1).
 
 2. **Llama2 and PaLM2 API Integration:**
-   - The second approach involved integrating the Llama2 and PaLM2 APIs to create a chatbot that leverages external APIs for a seamless admission inquiry experience. You can find more information in the [Llama2-PaLM2 Approach Folder](link_to_folder).
+   - The second approach involved integrating the Llama2 and PaLM2 APIs to create a chatbot that leverages external APIs for a seamless admission inquiry experience. You can find more information in the [Llama2-PaLM2 Approach Folder](https://github.com/notsointresting/DBATU-Inquiry-Chatbot/tree/main/Approach_2).
 
 3. **Ongoing Development with LangChain, Azure, and OpenAI:**
    - Our third approach, currently under development, aims to incorporate LangChain, Azure, and OpenAI for an even more advanced and intelligent admission chatbot. Stay tuned for updates and check out the progress in the [LangChain-Azure-OpenAI Approach Folder](link_to_folder).
