@@ -50,3 +50,59 @@ The code provided follows a specific structure to build the chatbot. Let's break
 
 - **Rule-Based Nature:** These chatbots are somewhat rule-based, which means they rely on predefined patterns and responses, and may not handle entirely novel queries well.
 
+# Code Explaination
+
+## Preprocessing Data
+
+```python
+for intent in data['intents']:
+    for pattern in intent['patterns']:
+        wrds = nltk.word_tokenize(pattern)
+        for item in wrds:
+            words.extend(wrds)
+            docs_patt.append(wrds)
+            docs_tag.append(intent['tag'])
+            if intent['tag'] not in labels:
+                labels.append(intent['tag'])
+```
+In this code snippet, the patterns from the intents are tokenized using the nltk.word_tokenize function. The words, patterns, and tags are then stored in separate lists for further processing. The unique tags are added to the labels list.
+
+## Model Building
+
+```python
+net = tflearn.input_data(shape=[None, len(training[0])])
+net = tflearn.fully_connected(net, 8)
+net = tflearn.fully_connected(net, 8)
+net = tflearn.fully_connected(net, len(output[0]), activation='softmax')
+net = tflearn.regression(net)
+
+model = tflearn.DNN(net)
+```
+This code snippet defines the architecture of the DNN model using the tflearn library. The input layer is defined with the shape of the training data. Fully connected layers are added with 8 nodes each, and the output layer is defined with the number of unique labels and a softmax activation function. The model is then initialized using the tflearn.DNN class.
+
+## Chat Function
+
+```python
+def chat():
+    print("BOT: Hi! I am your personal bot. I am here to answer queries on DBATU")
+    while True:
+        inp = input('User: ')
+        if inp.lower() == 'quit' or inp is None:
+            break
+            
+        inp_x = word_checker(inp)
+        results = model.predict([bag_of_words(inp_x, words)])[0]
+        results_index = numpy.argmax(results)
+        tag = labels[results_index]
+        
+        if results[results_index] >= 0.9:
+            for tg in data['intents']:
+                if tg['tag'] == tag:
+                    responses = tg['responses']
+                    ms = random.choice(responses)
+                    print('BOT: {}'.format(ms))
+                    
+        else:
+            print("BOT: Sorry, I don't know how to answer that yet")
+```
+This code snippet defines the chat function that simulates the conversation between the user and the chatbot. It starts by printing a welcome message and then enters a loop to continuously prompt the user for input. The user input is preprocessed using the word_checker function to correct any spelling errors. The model predicts the intent based on the preprocessed input, and if the confidence score is above a certain threshold (0.9), a random response from the corresponding intent is generated and displayed. If the confidence score is below the threshold, a default response is displayed.
