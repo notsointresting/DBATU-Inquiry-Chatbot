@@ -19,7 +19,7 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 In the prototype of the final project, three different approaches have been explored:
 
 1. **Creating chatbot using NLP and DNN:**
-   - In the first approach, we built a chatbot using Natural Language Processing (NLP) and Deep Neural Networks (DNN) to provide quick and accurate responses to admission-related queries. You can explore the code and details in the [NLP-DNN Approach Folder](link_to_folder).
+   - In the first approach, we built a chatbot using Natural Language Processing (NLP) and Deep Neural Networks (DNN) to provide quick and accurate responses to admission-related queries. You can explore the code and details in the [NLP-DNN Approach Folder](https://github.com/notsointresting/DBATU-Inquiry-Chatbot/tree/main/Approach_1).
 
 2. **Llama2 and PaLM2 API Integration:**
    - The second approach involved integrating the Llama2 and PaLM2 APIs to create a chatbot that leverages external APIs for a seamless admission inquiry experience. You can find more information in the [Llama2-PaLM2 Approach Folder](link_to_folder).
