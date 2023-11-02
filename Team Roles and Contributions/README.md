@@ -1,4 +1,4 @@
-#      Team Members Role 
+#                     Team Members Role 
 
 ## Members:
 
@@ -23,7 +23,7 @@
     Expanding proficiency in Natural Language Processing (NLP) and Deep Neural Networks (DNN).
     Gaining familiarity with Azure services and cloud computing.	
 	
-### Responsibilities of Fellow:
+##Responsibilities of Fellow:
 
  Contributing to the project goals and objectives.
  Completing individual tasks within the timeframe. 
