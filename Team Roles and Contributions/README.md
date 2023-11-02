@@ -3,13 +3,15 @@
 ## Members:
 
 ###	1] Sahil Shreewardhankar (Lead Developer) 
-## Area of Expertise: 
+##	Area of Expertise: 
 		C, Python, problem Solver, Project Management, 
 		Proficient in Software testing, security, development and deployment, Command over Azure platform. 
   
+  
 ###	2] Surekha Thombare (fellow )  
-## Area of Expertise:
+##	Area of Expertise:
 		C, Python, Html, CSS, Javascript, efficiently handles Microsoft Cloud computing plateform, Azure 
+  
 
 ## Responsibilities of Project Leader:
 
@@ -25,10 +27,10 @@
 	
 ## Responsibilities of Fellow:
 
- Contributing to the project goals and objectives.
- Completing individual tasks within the timeframe. 
- Collaborating with team leader.
- Handle all documentary work related to project.
- Help leader to design frontend. 
+  Contributing to the project goals and objectives.
+  Completing individual tasks within the timeframe. 
+  Collaborating with team leader.
+  Handle all documentary work related to project.
+  Help leader to design frontend. 
 
 
