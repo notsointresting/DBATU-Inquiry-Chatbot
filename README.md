@@ -26,6 +26,7 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 7. [ ] Create diagrams and architectures for the project.
 8. [ ] Prepare a project presentation (PPT).
 9. [ ] Include a section with project references and resources.
+10. [ ] Add Dataset (admission,DBATU)
       
 ### Approaches
 
