@@ -55,7 +55,7 @@ We continuously strive to improve the chatbot based on the guidance and insights
   
 
 ## Contributors
-- [Gauri Thombare](https://github.com/gauri-001)
+- [Surekha Thombare](https://github.com/gauri-001)
 - [Sahil Shriwardhankar](https://github.com/notsointresting)
 
 
