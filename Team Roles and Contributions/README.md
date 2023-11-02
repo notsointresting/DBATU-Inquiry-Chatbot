@@ -1,0 +1,34 @@
+##      Team Members Role 
+
+Members:
+
+	1] Sahil Shreewardhankar (Project Leader) 
+Area of Expertise: 
+		C, Python, problem Solver, Project Management, 
+		Proficient in Software testing, security, development and 			deployment, Command over Azure platform. 
+
+	2] Surekha Thombare (Fellows)
+	Area of Expertise:
+			C, Python, Html, CSS, Javascript, efficiently handles 				Microsoft Cloud computing plateform, Azure 
+
+Responsibilities of Project Leader:
+
+    Lead the development phase of the project, overseeing coding and software development.
+    Implement technical solutions and ensure the chatbot's functionality and performance.
+    Collaborate with team members to integrate Azure, LangChain, and OpenAI technologies.
+
+Learning Focus:
+
+    Actively acquiring knowledge and experience in programming languages, such as Python.
+    Expanding proficiency in Natural Language Processing (NLP) and Deep Neural Networks (DNN).
+    Gaining familiarity with Azure services and cloud computing.	
+	
+Responsibilities of Fellow:
+
+o	Contributing to the project goals and objectives.
+o	Completing individual tasks within the timeframe. 
+o	Collaborating with team leader.
+o	Handle all documentary work related to project.
+o	Help leader to design frontend. 
+
+
