@@ -17,7 +17,7 @@
 - Gaining familiarity with Azure services and cloud computing.
   
   
-##	2] Surekha Thombare (fellow )  
+##	Surekha Thombare (fellow)  
 ###	Area of Expertise:
 		C, Python, HTML, CSS, Javascript, efficiently handles Microsoft Cloud computing platform, Azure 	
 	
