@@ -25,10 +25,10 @@ Learning Focus:
 	
 Responsibilities of Fellow:
 
-o Contributing to the project goals and objectives.
-o Completing individual tasks within the timeframe. 
-o Collaborating with team leader.
-o Handle all documentary work related to project.
-o Help leader to design frontend. 
+ Contributing to the project goals and objectives.
+ Completing individual tasks within the timeframe. 
+ Collaborating with team leader.
+ Handle all documentary work related to project.
+ Help leader to design frontend. 
 
 
