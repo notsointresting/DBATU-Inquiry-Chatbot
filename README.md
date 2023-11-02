@@ -21,7 +21,7 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 2. [x] Add detailed explanations to the Llama2-PaLM2 approach section.
 3. [ ] Update the LangChain-Azure-OpenAI approach progress.
 4. [ ] Add information about the overall project.
-5. [ ] Add information about the role/contribution of team members in the project.
+5. [x] Add information about the role/contribution of team members in the project.
 6. [ ] Add information about the technology used in the project in detail.
 7. [ ] Create diagrams and architectures for the project.
 8. [ ] Prepare a project presentation (PPT).
