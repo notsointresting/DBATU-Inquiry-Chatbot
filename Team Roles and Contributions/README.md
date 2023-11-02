@@ -6,6 +6,7 @@
 ## Area of Expertise: 
 		C, Python, problem Solver, Project Management, 
 		Proficient in Software testing, security, development and deployment, Command over Azure platform. 
+  
 
 	2] Surekha Thombare (fellow )  
 ## Area of Expertise:
