@@ -8,7 +8,7 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 2. [To-Do List](#to-do-list)
 3. [Approaches](#approaches)
 4. [Features](#features)
-5. [Contributing](#contributing)
+5. [Contributing](#contributors)
 6. [Mentor](#mentor)
 
 ## Introduction
