@@ -1,8 +1,8 @@
-#                     Team Members Role 
+#                     Team Member's Role 
 
-## Members:
 
-Sahil Shriwardhankar (Lead Developer)
+
+## Sahil Shriwardhankar (Lead Developer)
 
 ### Responsibilities:
 
