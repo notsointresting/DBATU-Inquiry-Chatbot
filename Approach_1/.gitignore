@@ -5,3 +5,4 @@ Thumbs.db
 
 # Ignore your .env file
 .env
+.streamlit/secrets.toml
