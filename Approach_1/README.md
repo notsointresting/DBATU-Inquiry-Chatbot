@@ -1,44 +1,69 @@
-# Chatbot using Llama and PaLM 2 API
+# Introduction
 
-## Introduction
-
-In this article, we will explore how to create a chatbot using the Llama and PaLM 2 API. Llama is a Python library that provides tools for building and deploying conversational AI models, while PaLM 2 is an API developed by Google that allows us to generate text using large language models.
+This code allows users to chat with multiple PDF files. It utilizes the Palm and Langchain libraries for natural language processing and conversational retrieval. Users can upload PDF files, ask questions, and receive responses from a chatbot.
 
 ## Key Concepts
 
-Before we dive into the code, let's understand some key concepts:
+- **Palm:** The Palm library is used for generating embeddings of text. It provides a way to represent text as numerical vectors, which can be used for various NLP tasks.
 
-- **Llama:** Llama is a Python library that simplifies the process of building and deploying conversational AI models. It provides tools for natural language understanding, dialogue management, and text generation.
+- **Langchain:** Langchain is a library that combines different components for conversational retrieval. It includes a language model, memory, and vector store to enable chatbot-like interactions.
 
-- **PaLM 2:** PaLM 2 is an API developed by Google that allows us to generate text using large language models. It is based on the PaLM (Parameterized Language Model) architecture, which is designed to generate coherent and contextually relevant responses.
-
-- **VectorStoreIndex:** VectorStoreIndex is a class provided by Llama that allows us to index and search text documents based on their semantic similarity. It uses embeddings to represent the documents and performs efficient nearest neighbor search.
+- **Streamlit:** Streamlit is a Python library used for building interactive web applications. It provides an easy-to-use interface for creating UI elements and handling user input.
 
 ## Code Structure
 
-The code provided can be divided into the following sections:
+The code is structured into several functions and a main function. Here's an overview of the main functions:
 
-- **Installation:** The code begins with the installation of the required libraries using pip.
+- `get_conversational_chain(vector_store)`: Creates a conversational retrieval chain using the Langchain library. It takes a vector store as input and returns a conversation chain object.
 
-- **Importing Libraries:** The necessary libraries are imported, including llama-index, pypdf, google-generativeai, transformers, and others.
+- `get_pdf_text(pdf_docs)`: Extracts the text from the uploaded PDF files using the PyPDF2 library to read the PDFs and extract the text from each page.
 
-- **Loading PDF Files:** The code creates a directory called "data" and loads the PDF files from that directory using the SimpleDirectoryReader class.
+- `get_text_chunks(text)`: Splits the extracted text into smaller chunks using a recursive character-based text splitter to divide the text into chunks of a specified size.
 
-- **Text Chunking and Embedding:** The text from the PDF files is split into small chunks and embeddings are created for each chunk using the PaLM library. The ServiceContext class is used to configure the parameters for chunking and overlapping.
+- `get_vector_store(text_chunks)`: Generates embeddings for the text chunks using the Palm library. It creates a vector store using the FAISS library, which allows for efficient similarity search.
 
-- **Indexing:** The VectorStoreIndex class is used to create an index from the documents. This index allows us to perform efficient search operations based on semantic similarity.
+- `Processing_data(pdf_docs)`: Processes the uploaded PDF files by extracting text, splitting it into chunks, and generating embeddings. It also initializes the conversation chain.
 
-- **Storing and Loading the Index:** The index is stored using the storage_context.persist() method, which saves the index to disk. This allows us to load the index later without having to recreate it from scratch.
+- `user_input(user_question)`: Handles user input and generates responses from the chatbot. It takes a user question as input and uses the conversation chain to generate a response.
 
-- **Q/A:** The code sets up a query engine using the index and enters a loop where it prompts the user for input and generates a response based on the query. The response is displayed using the Markdown class.
+- `main()`: The main function that sets up the Streamlit application. It configures the page title, creates the UI elements, and handles user interactions.
 
-## Advantages
+## Code Examples
 
-- By integrating the PaLM2 model, we can generate meaningful responses based on the input query.
-- Llama_index provides a powerful and efficient way to search through large collections of documents and retrieve relevant information.
-- PaLM2 API is free.
+Here are a few code examples to illustrate how the functions are used:
 
-## Disadvantages
+1. Creating a conversation chain:
 
-- May produce incorrect information.
-- Does not have a conversation buffer.
+    ```python
+    vector_store = get_vector_store(text_chunks)
+    conversation_chain = get_conversational_chain(vector_store)
+    ```
+
+2. Processing PDF files:
+
+    ```python
+    def Processing_data(pdf_docs):
+    with st.spinner("Processing"):
+        raw_text = get_pdf_text(pdf_docs)
+        text_chunks = get_text_chunks(raw_text)
+        vector_store = get_vector_store(text_chunks)
+        st.session_state.conversation = get_conversational_chain(vector_store)
+    ```
+
+3. Handling user input and generating responses:
+
+    ```python
+    def user_input(user_question):
+    response = st.session_state.conversation({'question': user_question})
+    st.session_state.chatHistory = response['chat_history']
+    for i, message in enumerate(st.session_state.chatHistory):
+        key = f"chat_widget_{i}"  # Generate a unique key for each chat widget
+        if i % 2 == 0:
+            cht.message(f"Human: {message.content}", is_user=True, key=key)
+        else:
+            cht.message(f"Bot: {message.content}", key=key)  
+    ```
+
+# Conclusion
+
+This code provides a simple way to chat with multiple PDF files. It uses the Palm and Langchain libraries for natural language processing and conversational retrieval. By uploading PDF files and asking questions, users can interact with a chatbot-like system and receive responses based on the content of the PDFs.

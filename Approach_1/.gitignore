@@ -1,0 +1,6 @@
+# Ignore common files
+.DS_Store
+Thumbs.db
+
+# Ignore your .env file
+.env
