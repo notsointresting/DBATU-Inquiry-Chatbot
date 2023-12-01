@@ -1,108 +1,44 @@
-# Building a Chatbot Using Natural Language Processing (NLP) and Deep Neural Networks (DNN)
+# Chatbot using Llama and PaLM 2 API
 
 ## Introduction
 
-In this approach, we will explore how to build a chatbot using Natural Language Processing (NLP) and Deep Neural Networks (DNN) in Python. Chatbots are computer programs that can simulate human conversation and provide automated responses to user queries. NLP allows the chatbot to understand and interpret human language, while DNN enables the chatbot to learn and generate appropriate responses.
+In this article, we will explore how to create a chatbot using the Llama and PaLM 2 API. Llama is a Python library that provides tools for building and deploying conversational AI models, while PaLM 2 is an API developed by Google that allows us to generate text using large language models.
 
 ## Key Concepts
 
-Before diving into the code, let's understand some key concepts related to building a chatbot using NLP and DNN:
+Before we dive into the code, let's understand some key concepts:
 
-- **Natural Language Processing (NLP):** NLP is a subfield of artificial intelligence that focuses on the interaction between computers and human language. It involves tasks such as text tokenization, stemming, and sentiment analysis to understand and process human language.
+- **Llama:** Llama is a Python library that simplifies the process of building and deploying conversational AI models. It provides tools for natural language understanding, dialogue management, and text generation.
 
-- **Deep Neural Networks (DNN):** DNN is a type of artificial neural network that consists of multiple layers of interconnected nodes. It is used for complex pattern recognition and learning tasks. In the context of chatbots, DNNs can be trained to understand and generate human-like responses.
+- **PaLM 2:** PaLM 2 is an API developed by Google that allows us to generate text using large language models. It is based on the PaLM (Parameterized Language Model) architecture, which is designed to generate coherent and contextually relevant responses.
 
-- **Tokenization:** Tokenization is the process of breaking down a text into individual words or tokens. It is an essential step in NLP as it allows the chatbot to understand the meaning of each word in a sentence.
-
-- **Stemming:** Stemming is the process of reducing words to their base or root form. It helps in reducing the dimensionality of the vocabulary and improves the efficiency of the chatbot's language processing.
-
-- **Bag of Words:** Bag of Words is a feature engineering technique that represents text data as a numerical vector. It creates a vocabulary of unique words and assigns a binary value (1 or 0) to each word based on its presence or absence in a given sentence.
-
-- **Spelling Correction:** Spelling correction is a crucial aspect of chatbot development. It ensures that the chatbot can handle user queries with spelling errors by suggesting the correct spelling or word.
+- **VectorStoreIndex:** VectorStoreIndex is a class provided by Llama that allows us to index and search text documents based on their semantic similarity. It uses embeddings to represent the documents and performs efficient nearest neighbor search.
 
 ## Code Structure
 
-The code provided follows a specific structure to build the chatbot. Let's break down the code structure into different sections:
+The code provided can be divided into the following sections:
 
-- **Preprocessing Data:** This section involves loading and preprocessing the data required for training the chatbot. The code reads the intents from a JSON file and performs tokenization, stemming, and bag of words feature engineering on the patterns and tags.
+- **Installation:** The code begins with the installation of the required libraries using pip.
 
-- **Model Building:** In this section, the code defines and trains the DNN model using the preprocessed training data. The model architecture consists of input layers, fully connected layers, and a softmax activation function for multi-class classification.
+- **Importing Libraries:** The necessary libraries are imported, including llama-index, pypdf, google-generativeai, transformers, and others.
 
-- **Input Preprocessing:** This section includes functions for preprocessing user input. The `bag_of_words` function converts the user input into a numerical vector using the bag of words technique. The `words_to_list` function splits the input sentence into individual words and removes duplicates.
+- **Loading PDF Files:** The code creates a directory called "data" and loads the PDF files from that directory using the SimpleDirectoryReader class.
 
-- **Spelling Correction:** The code includes a function `word_checker` that checks the spelling of words in the user input. It compares the words with a vocabulary list and suggests corrections using the `difflib` library.
+- **Text Chunking and Embedding:** The text from the PDF files is split into small chunks and embeddings are created for each chunk using the PaLM library. The ServiceContext class is used to configure the parameters for chunking and overlapping.
 
-- **Chat Function:** The `chat` function is the main function that simulates the conversation between the user and the chatbot. It prompts the user for input, preprocesses the input, predicts the intent using the trained model, and generates appropriate responses based on the predicted intent.
+- **Indexing:** The VectorStoreIndex class is used to create an index from the documents. This index allows us to perform efficient search operations based on semantic similarity.
 
-## Advantages and Disadvantages
+- **Storing and Loading the Index:** The index is stored using the storage_context.persist() method, which saves the index to disk. This allows us to load the index later without having to recreate it from scratch.
 
-### Advantages:
+- **Q/A:** The code sets up a query engine using the index and enters a loop where it prompts the user for input and generates a response based on the query. The response is displayed using the Markdown class.
 
-- **Faster Responses:** Chatbots built using NLP and DNN technology can provide quicker responses to user queries, improving user satisfaction.
+## Advantages
 
-- **Ease of Building, Low Memory Consumption:** These chatbots are relatively easy to build and consume less memory compared to more complex AI models.
+- By integrating the PaLM2 model, we can generate meaningful responses based on the input query.
+- Llama_index provides a powerful and efficient way to search through large collections of documents and retrieve relevant information.
+- PaLM2 API is free.
 
-### Disadvantages:
+## Disadvantages
 
-- **Risk of Providing Incorrect Information:** If the necessary information is not present in the predefined intents, the chatbot may provide inaccurate or irrelevant information to users.
-
-- **Data Requirement:** Building effective NLP and DNN-based chatbots requires access to large amounts of text data, which can be challenging to acquire and prepare.
-
-- **Rule-Based Nature:** These chatbots are somewhat rule-based, which means they rely on predefined patterns and responses, and may not handle entirely novel queries well.
-
-# Code Explaination
-
-## Preprocessing Data
-
-```python
-for intent in data['intents']:
-    for pattern in intent['patterns']:
-        wrds = nltk.word_tokenize(pattern)
-        for item in wrds:
-            words.extend(wrds)
-            docs_patt.append(wrds)
-            docs_tag.append(intent['tag'])
-            if intent['tag'] not in labels:
-                labels.append(intent['tag'])
-```
-In this code snippet, the patterns from the intents are tokenized using the nltk.word_tokenize function. The words, patterns, and tags are then stored in separate lists for further processing. The unique tags are added to the labels list.
-
-## Model Building
-
-```python
-net = tflearn.input_data(shape=[None, len(training[0])])
-net = tflearn.fully_connected(net, 8)
-net = tflearn.fully_connected(net, 8)
-net = tflearn.fully_connected(net, len(output[0]), activation='softmax')
-net = tflearn.regression(net)
-
-model = tflearn.DNN(net)
-```
-This code snippet defines the architecture of the DNN model using the tflearn library. The input layer is defined with the shape of the training data. Fully connected layers are added with 8 nodes each, and the output layer is defined with the number of unique labels and a softmax activation function. The model is then initialized using the tflearn.DNN class.
-
-## Chat Function
-
-```python
-def chat():
-    print("BOT: Hi! I am your personal bot. I am here to answer queries on DBATU")
-    while True:
-        inp = input('User: ')
-        if inp.lower() == 'quit' or inp is None:
-            break
-            
-        inp_x = word_checker(inp)
-        results = model.predict([bag_of_words(inp_x, words)])[0]
-        results_index = numpy.argmax(results)
-        tag = labels[results_index]
-        
-        if results[results_index] >= 0.9:
-            for tg in data['intents']:
-                if tg['tag'] == tag:
-                    responses = tg['responses']
-                    ms = random.choice(responses)
-                    print('BOT: {}'.format(ms))
-                    
-        else:
-            print("BOT: Sorry, I don't know how to answer that yet")
-```
-This code snippet defines the chat function that simulates the conversation between the user and the chatbot. It starts by printing a welcome message and then enters a loop to continuously prompt the user for input. The user input is preprocessed using the word_checker function to correct any spelling errors. The model predicts the intent based on the preprocessed input, and if the confidence score is above a certain threshold (0.9), a random response from the corresponding intent is generated and displayed. If the confidence score is below the threshold, a default response is displayed.
+- May produce incorrect information.
+- Does not have a conversation buffer.
