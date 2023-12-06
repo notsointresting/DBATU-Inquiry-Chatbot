@@ -1,3 +1,19 @@
+# Table of Contents
+
+1. [Introduction](#introduction)
+2. [Key Concept](#key-concepts)
+3. [Code Structure](#code-structure)
+4. [Code Examples](#code-examples)
+2. [Conclusion](#conclusion)
+3. [Steps To Run Code](#steps-to-run-code)
+   - [Step 01](#step-01)
+   - [Step 02](#step-02)
+   - [Step 03](#step-03)
+   - [Step 04](#step-04)
+   - [Step 05](#step-05)
+
+
+
 # Introduction
 
 This code allows users to chat with multiple PDF files. It utilizes the Palm and Langchain libraries for natural language processing and conversational retrieval. Users can upload PDF files, ask questions, and receive responses from a chatbot.
@@ -67,3 +83,40 @@ Here are a few code examples to illustrate how the functions are used:
 # Conclusion
 
 This code provides a simple way to chat with multiple PDF files. It uses the Palm and Langchain libraries for natural language processing and conversational retrieval. By uploading PDF files and asking questions, users can interact with a chatbot-like system and receive responses based on the content of the PDFs.
+
+# Steps To Run Code!
+
+## STEP 01:
+CREATE CODESPACE, MAIN BRANCH
+
+## STEP 02:
+Install all libraries, for that use below command in terminal.
+
+```bash
+cd Approach_1
+pip install -r requirement.txt
+```
+
+## STEP 03:
+Go to this [Site](https://makersuite.google.com/app/apikey), and select **CREATE API KEY IN NEW PROJECT**, and copy the API Key
+
+## STEP 04:
+In Terminal
+```bash
+code P*
+```
+
+In Code, Go to Line No. 13,
+Replace the line with API key generated.
+
+```python
+os.environ['GOOGLE_API_KEY'] = "GOOGLE_API_KEY"
+```
+
+## STEP 05:
+Ready to run, 
+To Run code use below command!
+
+```bash
+streamlit run P*
+```
