@@ -17,6 +17,24 @@ SETTINGS_TITLE = "Settings"
 UPLOAD_INSTRUCTIONS = "Upload your PDF Files and Click on the Process Button"
 PROCESS_BUTTON_LABEL = "Process"
 
+
+
+
+
+def is_university_related(text):
+    university_keywords = ['university', 'college', 'education', 'academic', 'degree']
+    return any(keyword in text.lower() for keyword in university_keywords)
+
+def has_university_mention_in_history():
+    if st.session_state.chatHistory:
+        for message in st.session_state.chatHistory:
+            if is_university_related(message.content):
+                return True
+    return False
+
+
+
+
 def get_conversational_chain(vector_store):
     llm = GooglePalm()
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
@@ -50,15 +68,22 @@ def Processing_data(pdf_docs):
         st.session_state.conversation = get_conversational_chain(vector_store)
 
 def user_input(user_question):
-    response = st.session_state.conversation({'question': user_question})
-    st.session_state.chatHistory = response['chat_history']
-    for i, message in enumerate(st.session_state.chatHistory):
-        key = f"chat_widget_{i}"  # Generate a unique key for each chat widget
-        if i % 2 == 0:
-            cht.message(f"Human: {message.content}", is_user=True, key=key)
+    if st.session_state.conversation:
+        response = st.session_state.conversation({'question': user_question})
+
+        if 'chat_history' in response:
+            st.session_state.chatHistory = response['chat_history']
+            for i, message in enumerate(st.session_state.chatHistory):
+                key = f"chat_widget_{i}"  # Generate a unique key for each chat widget
+                if i % 2 == 0:
+                    cht.message(f"Human: {message.content}", is_user=True, key=key)
+                else:
+                    cht.message(f"Bot: {message.content}", key=key)
         else:
-            cht.message(f"Bot: {message.content}", key=key)  
-    
+            st.write("Error: Unexpected response from LangChain.")
+    else:
+        st.write("Error: LangChain conversation not initialized.")
+
 
 def main():
     st.set_page_config(PAGE_TITLE)
