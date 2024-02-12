@@ -62,12 +62,12 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 
 | Attempt Date | Score   | Improvement                              | Suggestions                                                         | Time Took   |
 |--------------|---------|------------------------------------------|---------------------------------------------------------------------|-------------|
-| 2/02/24      | 11/33   | Tried Gemini-pro (On same list of questions) |                                                                     |             |
+| 2/02/24      | 11/33   | Tried Gemini-pro (On the same list of questions) |                                                                     |             |
 | 2/02/24      | 12/33   | Changed prompt template                  |                                                                     |             |
 | 2/02/24      | 8/31    | Changed list of questions                |                                                                     |             |
 | 2/02/24      | 8/31    | Run again and tested                     | Suggestion (Make individual PDFs, For individual information)       | 2/02/24     |
-| 2/02/24      | (15/31) | Created individual PDFs                  |                                                                     | 2.9 Minutes |
-| 2/02/24      | (11/31) | Updated dataset                          |                                                                     | 2.5 Minutes |
+| 2/02/24      | 15/31 | Created individual PDFs                  |                                                                     | 2.9 Minutes |
+| 2/02/24      | 11/31 | Updated dataset                          |                                                                     | 2.5 Minutes |
 | TBA          | TBA     | TBA                                      | TBA                                                                 | TBA         |
 
 
