@@ -5,15 +5,31 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [To-Do List](#to-do-list)
-3. [Approaches](#approaches)
-4. [Features](#features)
-5. [Contributing](#contributors)
-6. [Mentor](#mentor)
+2. [To-Do List 2024](#to-do-list-2024)
+3. [To-Do List](#to-do-list)
+4. [Approaches](#approaches)
+5. [Features](#features)
+6. [Contributing](#contributors)
+7. [Mentor](#mentor)
 
 ## Introduction
 
 DBATU Admission Inquiry Chatbot is a user-friendly tool that provides information and answers to common questions related to the admission process at Dr. Babasaheb Ambedkar Technological University.
+
+## To-Do List 2024
+1. [x] Explore ways to make  DBATU Admission Inquiry Chatbot.
+2. [ ] Research in Gemini Documentation.
+3. [ ] Refine the Azure-OpenAI Model.
+4. [ ] Make a List of questions.
+
+   - [x] 20 Questions
+   - [x] 33 Questions
+   - [ ] 50 Questions
+   - [ ] 100 Questions
+5. [ ] Creating Research Paper
+6. [ ] Creating other required documents
+7. [ ] Create Chatbot using RASA Framework and NLP/NLU
+
 
 ## To-Do List
 
@@ -27,7 +43,34 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 8. [x] Prepare a project presentation (PPT).
 9. [x] Include a section with project references and resources.
 10. [x] Add Dataset (admission,DBATU)
-      
+
+## Accuracy
+### Accuracy of Chatbot using OpenAI
+
+| Attempt Date | Score | Improvement            | Suggestions                                                                                         |
+|--------------|-------|------------------------|----------------------------------------------------------------------------------------------------|
+| 31/01/2024   | 5/30  | First Attempt          |                                                                                                    |
+| 31/01/2024   | 16/30 | Added more dataset     |                                                                                                    |
+| 1/02/2024    | 21/30 | Changed Prompt Template|                                                                                                    |
+| 1/02/2024    | 19/30 | Changed Prompt Template| Suggestion (Need to modify the prompt template to get better results) (Need to fine-tune dataset) |
+| TBA          | TBA   | TBA                    | TBA                                                                                                |
+
+---
+
+### Accuracy of Chatbot using Gemini-Pro
+
+| Attempt Date | Score   | Improvement                              | Suggestions                                                         | Time Took   |
+|--------------|---------|------------------------------------------|---------------------------------------------------------------------|-------------|
+| 2/02/24      | 11/33   | Tried Gemini-pro (On same list of questions) |                                                                     |             |
+| 2/02/24      | 12/33   | Changed prompt template                  |                                                                     |             |
+| 2/02/24      | 8/31    | Changed list of questions                |                                                                     |             |
+| 2/02/24      | 8/31    | Run again and tested                     | Suggestion (Make individual PDFs, For individual information)       | 2/02/24     |
+| 2/02/24      | (15/31) | Created individual PDFs                  |                                                                     | 2.9 Minutes |
+| 2/02/24      | (11/31) | Updated dataset                          |                                                                     | 2.5 Minutes |
+| TBA          | TBA     | TBA                                      | TBA                                                                 | TBA         |
+
+
+
 ### Approaches
 
 In the prototype of the final project, three different approaches have been explored:
