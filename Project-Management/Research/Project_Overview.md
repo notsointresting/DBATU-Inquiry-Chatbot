@@ -88,11 +88,15 @@ Chatbots face several problem statements before the advent of Large Language Mod
 
 ## References 📚🔗
 
-- [Reference 1]
-- [Reference 2]
-- [Reference 3]
+- Alepis, E., & Virvou, M. (2011). Automatic generation of emotions in tutoring agents for affective e-learning in medical 
+  education. Expert Systems with Applications, 38(8): 9840–9847.
   
-**_Add reference links or book name_**
+- Avalverde, D. (2019). A Brief History of Chatbots. Perception, Control, Cognition. Retrieved March 9, 2019 from: (https://pcc.cs.byu.edu/2018/03/26/a-brief-history-of-chatbots/)
+  
+-  Lip ko, H. (2018). Meet Jill Watson: Georgia Tech's first AI teaching assistant. Retrieved on March 9, 2019 from: (https://pe.gatech.edu/blog/meet-jill-watson-georgia-techs-first-ai-teaching-assistant.)
+- Nguyen, M. (2017). How artificial intelligence & machine learning produced robots we can talk to. Business Insider. Retrieved March 9, 2019 from: (https://www.businessinsider.com/what-is-chatbot-talking-ai-robot-chat-simulators-2017-10)
+
+- Wikipedia (2019). Chatbot. Retrieved March 9, 2019 from: (https://en.wikipedia.org/wiki/Chatbot)
 
 ---
 
