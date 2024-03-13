@@ -28,7 +28,8 @@ Enhanced skills in organizing, managing, and maintaining project documentation. 
 Deepen understanding of project management methodologies, tools, and techniques. Learn about project planning, scheduling, resource management, and risk assessment to effectively contribute to project development.
 #### Technical Skills: 
 Strengthened technical skills relevant to project development and the creation of chatbot projects. This includes programming languages (such as Python for chatbot development), database management, version control systems (e.g., Git), and software development methodologies.
- 
+#### Chatbot Development:
+Dive deeper into chatbot development by learning about natural language processing (NLP), machine learning algorithms for chatbots, conversational design principles, and integration with messaging platforms or web applications.
 ###  Responsibilities of Co-Creater:
 
   - Contributing to the project goals and objectives.
