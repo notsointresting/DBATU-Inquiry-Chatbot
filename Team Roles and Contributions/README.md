@@ -19,9 +19,9 @@
   
 ##	Surekha Thombare (Project Co-Creater and Documentation Coordinator)  
 ###	Area of Expertise:
-		C, Python, HTML, CSS, Javascript, efficiently handles Microsoft Cloud computing platform, Azure 	
+	C, Python, HTML, CSS, Javascript, efficiently handles Microsoft Cloud computing platform, Azure 	
 	
-###  Responsibilities of Fellow:
+###  Responsibilities of Co-Creater:
 
   Contributing to the project goals and objectives.
   Completing individual tasks within the timeframe. 
