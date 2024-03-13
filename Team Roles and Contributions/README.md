@@ -20,7 +20,7 @@
 ##	Surekha Thombare (Project Co-Creater and Documentation Coordinator)  
 ##	Area of Expertise:
 	C, Python, HTML, CSS, Javascript, efficiently handles Microsoft Cloud computing platform, Azure 
-### Documentation Management:
+#### Documentation Management:
 Enhance your skills in organizing, managing, and maintaining project documentation. Focus on document version control, organization standards, and best practices for creating clear and concise documentation.
 	
 ###  Responsibilities of Co-Creater:
