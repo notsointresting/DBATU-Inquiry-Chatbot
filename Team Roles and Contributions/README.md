@@ -24,7 +24,10 @@
 
 #### Documentation Management:
 Enhance your skills in organizing, managing, and maintaining project documentation. Focus on document version control, organization standards, and best practices for creating clear and concise documentation.
-	
+#### Project Management:
+Deepen your understanding of project management methodologies, tools, and techniques. Learn about project planning, scheduling, resource management, and risk assessment to effectively contribute to project development.
+
+ 
 ###  Responsibilities of Co-Creater:
 
   - Contributing to the project goals and objectives.
