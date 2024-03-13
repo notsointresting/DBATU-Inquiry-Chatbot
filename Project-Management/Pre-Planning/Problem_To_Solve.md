@@ -5,15 +5,16 @@
 
 ## What is the problem that needs to be solved?
 1.  Cold user experience
-2.  Lacks engagement
-3.  Lacks user experience
-4.  Chatbot security
-5.  No clear scope
-6.  Multiple language support
-7.  Weak memory
-8.  Limited responses
-9.  Lack of personalization
-10. Lack of emotions 
+2.  Lacks of Network
+3.  Lacks engagement
+4.  Lacks user experience
+5.  Chatbot security
+6.  No clear scope
+7.  Multiple language support
+8.  Weak memory
+9.  Limited responses
+10.  Lack of personalization
+11. Lack of emotions 
 
 ## Why is it a problem?
   
