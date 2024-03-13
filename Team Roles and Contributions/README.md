@@ -23,10 +23,11 @@
 ### Learning Focus:
 
 #### Documentation Management:
-Enhance your skills in organizing, managing, and maintaining project documentation. Focus on document version control, organization standards, and best practices for creating clear and concise documentation.
+Enhanced skills in organizing, managing, and maintaining project documentation. Focus on document version control, organization standards, and best practices for creating clear and concise documentation.
 #### Project Management:
-Deepen your understanding of project management methodologies, tools, and techniques. Learn about project planning, scheduling, resource management, and risk assessment to effectively contribute to project development.
-
+Deepen understanding of project management methodologies, tools, and techniques. Learn about project planning, scheduling, resource management, and risk assessment to effectively contribute to project development.
+#### Technical Skills: 
+Strengthened technical skills relevant to project development and the creation of chatbot projects. This includes programming languages (such as Python for chatbot development), database management, version control systems (e.g., Git), and software development methodologies.
  
 ###  Responsibilities of Co-Creater:
 
