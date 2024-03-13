@@ -28,5 +28,5 @@
   Collaborating with team leader.
   Handle all documentary work related to the project.
   Help leader to design frontend. 
-
+  Develop and maintain project documentation including but not limited to project plans, schedules, status reports, meeting minutes, and correspondence.
 
