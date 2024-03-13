@@ -29,6 +29,6 @@
   - Handle all documentary work related to the project.
   - Help leader to design frontend. 
   - Develop and maintain project documentation including but not limited to project plans, schedules, status reports, meeting minutes, and correspondence.
-Coordinate with project team members to gather relevant information and updates for documentation purposes.
+- Coordinate with project team members to gather relevant information and updates for documentation purposes.
 Ensure all project documentation is accurate, complete, and up-to-date, adhering to established standards and guidelines.
 Organize and maintain a centralized repository or filing system for easy access and retrieval of project documents.
