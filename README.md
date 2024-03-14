@@ -12,7 +12,7 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 6. [Features](#features)
 7. [Contributing](#contributors)
 8. [Mentor](#mentor)
-
+   
 ## Introduction
 
 DBATU Admission Inquiry Chatbot is a user-friendly tool that provides information and answers to common questions related to the admission process at Dr. Babasaheb Ambedkar Technological University.
