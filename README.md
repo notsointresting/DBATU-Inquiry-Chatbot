@@ -48,12 +48,13 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 ## Accuracy
 ### Accuracy of Chatbot using OpenAI
 
-| Attempt Date | Score | Improvement            | Suggestions                                                                                         |
+| Attempt Date | Score | Improvement            | Suggestions                                                                                        |
 |--------------|-------|------------------------|----------------------------------------------------------------------------------------------------|
 | 31/01/2024   | 5/30  | First Attempt          |                                                                                                    |
 | 31/01/2024   | 16/30 | Added more dataset     |                                                                                                    |
 | 1/02/2024    | 21/30 | Changed Prompt Template|                                                                                                    |
-| 1/02/2024    | 19/30 | Changed Prompt Template| Suggestion (Need to modify the prompt template to get better results) (Need to fine-tune dataset) |
+| 1/02/2024    | 19/30 | Changed Prompt Template| Suggestion (Need to modify the prompt template to get better results) (Need to fine-tune dataset)  |
+| 18/03/2024   | 23/30 | Changed Data, so score has increased | Suggestion (Need to modify the prompt template to get better results)                |
 | TBA          | TBA   | TBA                    | TBA                                                                                                |
 
 ---
