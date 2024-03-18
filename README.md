@@ -71,6 +71,12 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 | TBA          | TBA     | TBA                                      | TBA                                                                 | TBA         |
 
 
+### Accuracy of Chatbot using Gemini-Pro-1.5
+
+| Attempt Date | Score | Improvement | Suggestions              | Time Took |
+|--------------|-------|-------------|--------------------------|-----------|
+| 18-03-2024   | 60/60 | None        | Need to fine-tune Model | 5.27 Minutes   |
+
 
 ### Approaches
 
