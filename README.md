@@ -25,11 +25,11 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 
    - [x] 20 Questions
    - [x] 33 Questions
-   - [ ] 50 Questions
+   - [x] 50 Questions
    - [ ] 100 Questions
 5. [ ] Creating Research Paper
 6. [ ] Creating other required documents
-7. [ ] Create Chatbot using RASA Framework and NLP/NLU
+7. [x] Create Chatbot using PyTorch Framework and NLP/NLU
 
 
 ## To-Do List
@@ -43,7 +43,7 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 7. [ ] Create diagrams and architectures for the project.
 8. [x] Prepare a project presentation (PPT).
 9. [x] Include a section with project references and resources.
-10. [x] Add Dataset (admission,DBATU)
+10. [x] Add Dataset (admission, DBATU)
 
 ## Accuracy
 ### Accuracy of Chatbot using OpenAI
