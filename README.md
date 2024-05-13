@@ -1,6 +1,6 @@
 # DBATU Admission Inquiry Chatbot
 
-DBATU Admission Inquiry Chatbot is a user-friendly tool that provides information and answers to common questions related to the admission process at Dr. Babasaheb Ambedkar Technological University. In the development of this Chatbot, multiple approaches have been explored to create the most effective solution.
+DBATU Admission Inquiry Chatbot is a user-friendly tool that provides information and answers to common questions related to the admission process at Dr. Babasaheb Ambedkar Technological University. In developing this Chatbot, multiple approaches have been explored to create the most effective solution.
 
 ## Table of Contents
 
@@ -19,17 +19,18 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 
 ## To-Do List 2024
 1. [x] Explore ways to make  DBATU Admission Inquiry Chatbot.
-2. [ ] Research in Gemini Documentation.
+2. [x] Research in Gemini Documentation.
 3. [ ] Refine the Azure-OpenAI Model.
-4. [ ] Make a List of questions.
+4. [x] Make a List of questions.
 
    - [x] 20 Questions
    - [x] 33 Questions
    - [x] 50 Questions
-   - [ ] 100 Questions
+   - [x] 100 Questions
 5. [ ] Creating Research Paper
 6. [ ] Creating other required documents
 7. [x] Create Chatbot using PyTorch Framework and NLP/NLU
+8. [ ] Create UI for chatbot
 
 
 ## To-Do List
@@ -39,8 +40,8 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 3. [x] Update the LangChain-Azure-OpenAI approach progress.
 4. [x] Add information about the overall project.
 5. [x] Add information about the role/contribution of team members in the project.
-6. [x] Add information about the technology used in the project in detail.
-7. [ ] Create diagrams and architectures for the project.
+6. [x] Include information about the project's technology in detail.
+7. [x] Create diagrams and architectures for the project.
 8. [x] Prepare a project presentation (PPT).
 9. [x] Include a section with project references and resources.
 10. [x] Add Dataset (admission, DBATU)
@@ -84,7 +85,7 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 In the prototype of the final project, three different approaches have been explored:
 
 1. **Creating chatbot using NLP and DNN:** **Removed**
-   - In the first approach, we built a chatbot using Natural Language Processing (NLP) and Deep Neural Networks (DNN) to provide quick and accurate responses to admission-related queries. You can explore the code and details in the [NLP-DNN Approach Folder](https://github.com/notsointresting/DBATU-Inquiry-Chatbot/tree/main/Approach_1).
+   - In the first approach, we built a chatbot using Natural Language Processing (NLP) and Neural Networks (NN) to respond quickly and accurately to admission-related queries. You can explore the code and details in the [NLP-NN Approach Folder](https://github.com/notsointresting/ChatBot-PyTorch).
    - [x] Add Code
    - [x] Add Documentation
 
