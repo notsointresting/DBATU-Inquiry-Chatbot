@@ -20,15 +20,22 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 DB_FAISS_PATH = 'vectorstore/db_faiss'
 
 
+
+
 # Prompt template
 custom_prompt_template = """
+    Act as chatbot provided by Dr. Babasaheb Ambedkar Technological University, Lonere.
+      Whenever user says Hi, You should respond with Greeting and welcome user to university's chatbot. 
+      Answers of queires asked by user should from given documents only. Try to give the best and correct answer only.    
+    Also try to add some your own wordings the describe the answer.Don't greet.
+
     Use the following pieces of information to answer the user's question.\n
     Context: {context}
     Question: {question}
      
     Try to give the best and correct answer only.
     Also try to add some your own wordings the describe the answer.
-    Also try to provide website from given context only.
+    if website link is available in given context then only, try to provide website links from given context only. else don't provide any website link.
     Helpful Answer:
 """
 
@@ -44,7 +51,7 @@ def set_custom_prompt():
 
 #Loading the model
 def load_llm():
-    llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.6)
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest", temperature=0.6)
     return llm
 
 
@@ -65,7 +72,7 @@ def user_input(user_question):
     embeddings = GoogleGenerativeAIEmbeddings(model = "models/embedding-001")
     
     # Loading saved vectors from local path
-    db = FAISS.load_local(DB_FAISS_PATH, embeddings)
+    db = FAISS.load_local(DB_FAISS_PATH, embeddings, allow_dangerous_deserialization=True)
     docs = db.similarity_search(user_question)
     
     chain = get_conversational_chain()
@@ -77,7 +84,7 @@ def user_input(user_question):
     return response
 
 
-lst_questions = [
+'''lst_questions = [
     "Where is the university located?",
     "What courses does the university offer?",
     "How can I apply for admission?",
@@ -109,14 +116,17 @@ lst_questions = [
     "Does the university have a science lab?",
     "Does the university have a cultural fest?",
     "Who is Pramod?"
-]
+]'''
+
 start = time.time()
-for question in lst_questions:
-    with open('FAQ-5.txt', 'a') as f:
+while True:
+    question = input("Enter your question: ")
+    with open('FAQ-1.txt', 'a') as f:
         f.write('Q.' + question + "\n")
         f.write('Answer:  ' + user_input(question)['output_text'] )
         f.write('\n')
         f.write("\n")
+        time.sleep(5)
 end = time.time()
 
 print("Time taken to answer all the questions: ", end-start)
