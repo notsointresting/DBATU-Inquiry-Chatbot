@@ -118,15 +118,4 @@ def user_input(user_question):
     "Who is Pramod?"
 ]'''
 
-start = time.time()
-while True:
-    question = input("Enter your question: ")
-    with open('FAQ-1.txt', 'a') as f:
-        f.write('Q.' + question + "\n")
-        f.write('Answer:  ' + user_input(question)['output_text'] )
-        f.write('\n')
-        f.write("\n")
-        time.sleep(5)
-end = time.time()
 
-print("Time taken to answer all the questions: ", end-start)
