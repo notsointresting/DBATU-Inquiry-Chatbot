@@ -32,6 +32,11 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 7. [x] Create Chatbot using PyTorch Framework and NLP/NLU
 8. [ ] Create UI for chatbot
 
+   - [ ] Twilio Integration ( chatbot will be accessible through WhatsApp)
+   - [ ] Create a website and add a chatbot as a quick chat option.
+
+10. [ ] Add Documentation of RAG (Retrieval-Augmented Generation)
+
 
 ## To-Do List
 
@@ -40,7 +45,7 @@ DBATU Admission Inquiry Chatbot is a user-friendly tool that provides informatio
 3. [x] Update the LangChain-Azure-OpenAI approach progress.
 4. [x] Add information about the overall project.
 5. [x] Add information about the role/contribution of team members in the project.
-6. [x] Include information about the project's technology in detail.
+6. [x] Include detailed information about the project's technology.
 7. [x] Create diagrams and architectures for the project.
 8. [x] Prepare a project presentation (PPT).
 9. [x] Include a section with project references and resources.
@@ -114,6 +119,6 @@ We continuously strive to improve the chatbot based on the guidance and insights
 
 ## Mentor
 
-We would like to extend our gratitude to our project mentor for their guidance and support:
+We want to extend our gratitude to our project mentor for their guidance and support:
 
 - [Dr.Arvind Kiwelekar Sir](https://github.com/akiwelekar)
