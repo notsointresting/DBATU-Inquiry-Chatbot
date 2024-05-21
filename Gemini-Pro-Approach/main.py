@@ -1,121 +1,49 @@
-# Importing libs and modules
-from langchain.prompts import PromptTemplate
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_google_genai import ChatGoogleGenerativeAI
-import google.generativeai as genai
-from langchain_community.vectorstores.faiss import FAISS
-from langchain.chains.question_answering import load_qa_chain
-from fastapi import FastAPI
-from pydantic import BaseModel
-import os
-import time
-from dotenv import load_dotenv
+import streamlit as st
+from main_2 import user_input
+st.set_page_config(
+    page_title="Inquiry Chatbot",
+    page_icon="🤖"
 
-# Setting Google API Key
-load_dotenv()
-os.getenv("GOOGLE_API_KEY")
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+)
 
-# Path of vectore database
-DB_FAISS_PATH = 'vectorstore/db_faiss'
+def clear_chat_history():
+    st.session_state.messages = [
+        {"role": "assistant", "content": "Welcome to the Inquiry Chatbot! Please enter your inquiry below and I will do my best to help you out."}]
+
+def main():
+    st.title("Inquiry Chatbot")
+    st.write("Welcome to the Inquiry Chatbot! Please enter your inquiry below and I will do my best to help you out.")
+    st.sidebar.button('clear chat',on_click=clear_chat_history)
 
 
+    if "messages" not in st.session_state.keys():
+        st.session_state.messages = [
+            {"role": "assistant", "content": "Welcome to the Inquiry Chatbot! Please enter your inquiry below and I will do my best to help you out."}]
+        
+    for message in st.session_state.messages:
+        with st.chat_message(message['role']):
+            st.write(message['content'])
 
+        
+    if prompt := st.chat_input():
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
+            st.write(prompt)
 
-# Prompt template
-custom_prompt_template = """
-    Act as chatbot provided by Dr. Babasaheb Ambedkar Technological University, Lonere.
-      Whenever user says Hi, You should respond with Greeting and welcome user to university's chatbot. 
-      Answers of queires asked by user should from given documents only. Try to give the best and correct answer only.    
-    Also try to add some your own wordings the describe the answer.Don't greet.
+    # Display chat messages and bot response
+    if st.session_state.messages[-1]["role"] != "assistant":
+        with st.chat_message("assistant"):
+            with st.spinner("Thinking..."):
+                response = user_input(prompt)
+                placeholder = st.empty()
+                full_response = ''
+                for item in response['output_text']:
+                    full_response += item
+                    placeholder.markdown(full_response)
+                placeholder.markdown(full_response)
+        if response is not None:
+            message = {"role": "assistant", "content": full_response}
+            st.session_state.messages.append(message)
 
-    Use the following pieces of information to answer the user's question.\n
-    Context: {context}
-    Question: {question}
-     
-    Try to give the best and correct answer only.
-    Also try to add some your own wordings the describe the answer.
-    if website link is available in given context then only, try to provide website links from given context only. else don't provide any website link.
-    Helpful Answer:
-"""
-
-def set_custom_prompt():
-    """
-    Prompt template for QA retrieval for each vectorstore
-    """
-    prompt = PromptTemplate(template=custom_prompt_template,
-                            input_variables=['context', 'question'])
-    return prompt
-
-
-
-#Loading the model
-def load_llm():
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest", temperature=0.6)
-    return llm
-
-
-# Setting QA chain
-def get_conversational_chain():
-
-    prompt = set_custom_prompt()
-    
-    llm = load_llm()
-    chain = load_qa_chain(llm, chain_type="stuff", prompt=prompt)
-
-    return chain
-
-# User input function
-def user_input(user_question):
-    
-    # Set google embeddings
-    embeddings = GoogleGenerativeAIEmbeddings(model = "models/embedding-001")
-    
-    # Loading saved vectors from local path
-    db = FAISS.load_local(DB_FAISS_PATH, embeddings, allow_dangerous_deserialization=True)
-    docs = db.similarity_search(user_question)
-    
-    chain = get_conversational_chain()
-    
-    response = chain(
-        {"input_documents":docs, "question": user_question}
-        , return_only_outputs=True)
-
-    return response
-
-
-'''lst_questions = [
-    "Where is the university located?",
-    "What courses does the university offer?",
-    "How can I apply for admission?",
-    "What is the fee for the courses?",
-    "Does university offers hostels?",
-    "Who is the head of the university?",
-    "Does the university have a library, is there any digital library?",
-    "What sports does the university offer?",
-    "Does the university have a canteen?",
-    "What is the university's contact number?",
-    "Does the university have a website?",
-    "What is the university's email address?",
-    "Does the university offer scholarships?",
-    "What is the university's ranking?",
-    "Does the university have a placement cell?",
-    "What is the university's history?",
-    "Does the university have a research center?",
-    "What is the university's mission?",
-    "Does the university have a student council?",
-    "What is the university's attendance policy?",
-    "Does the university have a medical center?",
-    "What is the university's exam schedule?",
-    "Does the university have a computer lab?",
-    "What is the university's grading system?",
-    "Does the university have an alumni association?",
-    "What is the university's dress code?",
-    "Does the university have a music club?",
-    "What is the university's academic calendar?",
-    "Does the university have a science lab?",
-    "Does the university have a cultural fest?",
-    "Who is Pramod?"
-]'''
-
-
+if __name__ == "__main__":
+    main()

@@ -9,3 +9,5 @@ fastapi
 pydantic
 uvicorn
 requests
+streamlit
+langchain_community
