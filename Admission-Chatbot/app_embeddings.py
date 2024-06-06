@@ -45,7 +45,7 @@ def create_vector_db():
     batch_size = 50
     total_texts = len(texts)
 
-    # Initialize FAISS vector store
+
     # Initialize FAISS vector store
     db = None
 

@@ -39,7 +39,7 @@ def create_pdf(news_list_1, news_list_2, filename):
     Creates a PDF file with the latest news information from both URLs.
     """
 
-    pdf = FPDF()  # Force UTF-8 encoding (if using a newer fpdf version)
+    pdf = FPDF()  
     pdf.add_page()
     pdf.set_font('Arial', 'B', 16)
 
