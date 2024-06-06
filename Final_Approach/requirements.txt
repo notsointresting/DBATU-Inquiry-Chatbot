@@ -1,0 +1,13 @@
+google-generativeai
+python-dotenv
+langchain
+pypdf
+chromadb
+faiss-cpu
+langchain_google_genai
+fastapi
+pydantic
+uvicorn
+requests
+streamlit
+langchain_community

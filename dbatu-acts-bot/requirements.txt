@@ -1,0 +1,10 @@
+google-generativeai
+python-dotenv
+langchain
+Flask
+twilio
+pypdf
+faiss-cpu
+langchain_google_genai
+langchain_community
+requests
